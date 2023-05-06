@@ -7,16 +7,18 @@
         </addresses>
     </insured>
     <risks>
-        <risk name="Primary Residence">
-            <address street1="1 Salem Road" city="Smithville" state="NJ" zipCode="09190"/>
+        <risk name="DP Risk">
+            <dweillingPropertyRisk>
+                <address street1="1 Salem Road" city="Smithville" state="NJ" zipCode="09190"/>
+            </dweillingPropertyRisk>
         </risk>
-        <risk name="Primary Vehicle">
-            <autoRisk>
+        <risk name="PA Risk">
+            <personalAutoRisk>
                 <vehicle make="Subaru" model="Outback" year="2000" vin="5GAKRDED0CJ396612"/>
                 <drivers>
                     <driver type="foo" givenName="James" surname="Willmore" birthdate="1968-01-22"/>
                 </drivers>
-            </autoRisk>
+            </personalAutoRisk>
         </risk>
     </risks>
 </policy>

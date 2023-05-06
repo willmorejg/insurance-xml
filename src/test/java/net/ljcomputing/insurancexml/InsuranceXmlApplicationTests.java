@@ -32,10 +32,11 @@ import javax.xml.transform.stream.StreamSource;
 import net.ljcomputing.insurancexml.domain.Address;
 import net.ljcomputing.insurancexml.domain.AddressType;
 import net.ljcomputing.insurancexml.domain.Addresses;
-import net.ljcomputing.insurancexml.domain.Auto;
 import net.ljcomputing.insurancexml.domain.Driver;
 import net.ljcomputing.insurancexml.domain.Drivers;
+import net.ljcomputing.insurancexml.domain.DweillingPropertyRisk;
 import net.ljcomputing.insurancexml.domain.Insured;
+import net.ljcomputing.insurancexml.domain.PersonalAutoRisk;
 import net.ljcomputing.insurancexml.domain.Policy;
 import net.ljcomputing.insurancexml.domain.Risk;
 import net.ljcomputing.insurancexml.domain.Risks;
@@ -76,9 +77,12 @@ class InsuranceXmlApplicationTests {
         addresses.getAddresses().add(physicalAddr);
         addresses.getAddresses().add(billingAddr);
 
+        DweillingPropertyRisk dpRisk = new DweillingPropertyRisk();
+        dpRisk.setAddress(physicalAddr);
+
         Risk risk = new Risk();
-        risk.setName("Primary Residence");
-        risk.setAddress(physicalAddr);
+        risk.setName("DP Risk");
+        risk.setDweillingPropertyRisk(dpRisk);
 
         Vehicle vehicle = new Vehicle();
         vehicle.setMake("Subaru");
@@ -95,13 +99,13 @@ class InsuranceXmlApplicationTests {
         Drivers drivers = new Drivers();
         drivers.getDrivers().add(driver);
 
-        Auto auto = new Auto();
-        auto.setVehicle(vehicle);
-        auto.setDrivers(drivers);
+        PersonalAutoRisk paRisk = new PersonalAutoRisk();
+        paRisk.setDrivers(drivers);
+        paRisk.setVehicle(vehicle);
 
         Risk risk2 = new Risk();
-        risk2.setName("Primary Vehicle");
-        risk2.setAutoRisk(auto);
+        risk2.setName("PA Risk");
+        risk2.setPersonalAutoRisk(paRisk);
 
         Risks risks = new Risks();
         risks.getRisks().add(risk);

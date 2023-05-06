@@ -16,7 +16,13 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="auto">
+  <xs:complexType name="dweillingPropertyRisk">
+      <xs:sequence>
+        <xs:element name="address" type="tns:address"/>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personalAutoRisk">
       <xs:sequence>
         <xs:element name="vehicle" type="tns:vehicle"/>
         <xs:element name="drivers" type="tns:drivers"/>
@@ -26,10 +32,10 @@
   <xs:complexType name="risk">
     <xs:choice>
       <xs:sequence>
-        <xs:element name="address" type="tns:address"/>
+        <xs:element name="dweillingPropertyRisk" type="tns:dweillingPropertyRisk"/>
       </xs:sequence>
       <xs:sequence>
-        <xs:element name="autoRisk" type="tns:auto"/>
+        <xs:element name="personalAutoRisk" type="tns:personalAutoRisk"/>
       </xs:sequence>
     </xs:choice>
     <xs:attribute name="name" type="xs:string"/>
