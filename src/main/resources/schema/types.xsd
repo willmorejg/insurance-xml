@@ -63,8 +63,16 @@
 
     <xs:complexType name="driver">
         <xs:attributeGroup ref="tns:person"/>
-        <xs:attribute name="type" type="xs:string"/>
+        <xs:attribute type="xs:string" name="dlNumber"/>
+        <xs:attribute type="tns:USState" name="dlState"/>
     </xs:complexType>
+
+    <xs:simpleType name="riskType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Dwelling Property"/>
+            <xs:enumeration value="Personal Auto"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <!--
     <xs:complexType name="coverageType">

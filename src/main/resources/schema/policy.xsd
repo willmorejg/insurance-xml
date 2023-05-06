@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ljcomputing.net/policy"
-  xmlns:tns="http://ljcomputing.net/policy" elementFormDefault="qualified">
+  xmlns:tns="http://ljcomputing.net/policy" elementFormDefault="qualified"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
 
   <xs:include schemaLocation="types.xsd" />
 

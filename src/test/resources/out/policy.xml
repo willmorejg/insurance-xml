@@ -16,7 +16,7 @@
             <personalAutoRisk>
                 <vehicle make="Subaru" model="Outback" year="2000" vin="5GAKRDED0CJ396612"/>
                 <drivers>
-                    <driver type="foo" givenName="James" surname="Willmore" birthdate="1968-01-22"/>
+                    <driver dlNumber="DL123 45678 90000" dlState="NJ" givenName="James" surname="Willmore" birthdate="1968-01-22"/>
                 </drivers>
             </personalAutoRisk>
         </risk>

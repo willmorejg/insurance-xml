@@ -94,7 +94,8 @@ class InsuranceXmlApplicationTests {
         driver.setGivenName("James");
         driver.setSurname("Willmore");
         driver.setBirthdate(LocalDate.of(1968, 1, 22));
-        driver.setType("foo");
+        driver.setDlNumber("DL123 45678 90000");
+        driver.setDlState(USState.NJ);
 
         Drivers drivers = new Drivers();
         drivers.getDrivers().add(driver);
