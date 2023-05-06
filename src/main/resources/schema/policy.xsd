@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ljcomputing.net/policy"
+  xmlns:tns="http://ljcomputing.net/policy" elementFormDefault="qualified">
+
+  <xs:include schemaLocation="types.xsd" />
+
+  <xs:complexType name="addresses">
+    <xs:sequence>
+      <xs:element name="address" type="tns:address" minOccurs="1" maxOccurs="3"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="drivers">
+    <xs:sequence>
+      <xs:element name="driver" type="tns:driver" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="auto">
+      <xs:sequence>
+        <xs:element name="vehicle" type="tns:vehicle"/>
+        <xs:element name="drivers" type="tns:drivers"/>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="risk">
+    <xs:choice>
+      <xs:sequence>
+        <xs:element name="address" type="tns:address"/>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:element name="autoRisk" type="tns:auto"/>
+      </xs:sequence>
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="risks">
+    <xs:sequence>
+      <xs:element name="risk" type="tns:risk" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insured">
+    <xs:sequence>
+        <xs:element name="addresses" type="tns:addresses"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="tns:person"/>
+  </xs:complexType>
+
+  <xs:element name="policy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="insured" type="tns:insured"/>
+        <xs:element name="risks" type="tns:risks"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

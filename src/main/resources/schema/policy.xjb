@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jxb:bindings version="2.0" encoding="UTF-8"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jxb:extensionBindingPrefixes="xjc">
+
+    <jxb:bindings schemaLocation="policy.xsd">
+        <jxb:globalBindings>
+            <xjc:simple/>
+            <xjc:javaType name="java.time.LocalDate" xmlType="xs:date" adapter="io.github.threetenjaxb.core.LocalDateXmlAdapter" />
+            <xjc:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime" adapter="io.github.threetenjaxb.core.LocalDateTimeXmlAdapter" />
+        </jxb:globalBindings>
+    </jxb:bindings>
+
+</jxb:bindings>
