@@ -3,7 +3,6 @@
     xmlns:tns="http://ljcomputing.net/policy" elementFormDefault="qualified">
 
     <xs:include schemaLocation="usStates.xsd" />
-    <xs:include schemaLocation="usStates.xsd" />
 
     <xs:simpleType name="money">
         <xs:restriction base="xs:decimal">
@@ -73,7 +72,6 @@
             <xs:enumeration value="Personal Auto"/>
         </xs:restriction>
     </xs:simpleType>
-
     <!--
     <xs:complexType name="coverageType">
         <xs:sequence>

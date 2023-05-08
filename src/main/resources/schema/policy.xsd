@@ -29,6 +29,7 @@
         </xs:sequence>
       </xs:choice>
       <xs:attribute name="name" type="xs:string"/>
+      <xs:attribute name="riskType" type="tns:riskType" use="required"/>
     </xs:complexType>
   </xs:element>
 

@@ -7,13 +7,13 @@
         </addresses>
     </insured>
     <risks>
-        <risk name="PA Risk">
+        <risk name="PA Risk" riskType="Personal Auto">
             <vehicle make="Subaru" model="Outback" year="2000" vin="5GAKRDED0CJ396612"/>
             <drivers>
                 <driver dlNumber="DL123 45678 90000" dlState="NJ" givenName="James" surname="Willmore" birthdate="1968-01-22"/>
             </drivers>
         </risk>
-        <risk name="DP Risk">
+        <risk name="DP Risk" riskType="Dwelling Property">
             <address street1="1 Salem Road" city="Smithville" state="NJ" zipCode="09190"/>
         </risk>
     </risks>

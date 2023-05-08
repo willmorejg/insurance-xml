@@ -37,6 +37,7 @@ import net.ljcomputing.insurancexml.domain.Drivers;
 import net.ljcomputing.insurancexml.domain.Insured;
 import net.ljcomputing.insurancexml.domain.Policy;
 import net.ljcomputing.insurancexml.domain.Risk;
+import net.ljcomputing.insurancexml.domain.RiskType;
 import net.ljcomputing.insurancexml.domain.Risks;
 import net.ljcomputing.insurancexml.domain.USState;
 import net.ljcomputing.insurancexml.domain.Vehicle;
@@ -77,6 +78,7 @@ class InsuranceXmlApplicationTests {
 
         Risk dpRisk = new Risk();
         dpRisk.setName("DP Risk");
+        dpRisk.setRiskType(RiskType.DWELLING_PROPERTY);
         dpRisk.setAddress(physicalAddr);
 
         Vehicle vehicle = new Vehicle();
@@ -97,6 +99,7 @@ class InsuranceXmlApplicationTests {
 
         Risk paRisk = new Risk();
         paRisk.setName("PA Risk");
+        paRisk.setRiskType(RiskType.PERSONAL_AUTO);
         paRisk.setDrivers(drivers);
         paRisk.setVehicle(vehicle);
 
