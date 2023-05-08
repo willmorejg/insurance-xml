@@ -12,9 +12,12 @@
             <drivers>
                 <driver dlNumber="DL123 45678 90000" dlState="NJ" givenName="James" surname="Willmore" birthdate="1968-01-22"/>
             </drivers>
+            <coverage name="Coverage A" code="CVRA" amount="100000"/>
         </risk>
         <risk name="DP Risk" riskType="Dwelling Property">
             <address street1="1 Salem Road" city="Smithville" state="NJ" zipCode="09190"/>
         </risk>
     </risks>
+    <coverage name="Coverage A" code="CVRA" amount="100000"/>
+    <coverage name="Coverage B" code="CVRB" amount="50000"/>
 </policy>

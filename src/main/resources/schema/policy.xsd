@@ -17,17 +17,24 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="coverage">
+    <xs:attributeGroup ref="tns:coverageType"/>
+  </xs:complexType>
+
   <xs:element name="risk">
     <xs:complexType>
-      <xs:choice>
-        <xs:sequence>
-          <xs:element name="address" type="tns:address"/>
-        </xs:sequence>
-        <xs:sequence>
-          <xs:element name="vehicle" type="tns:vehicle"/>
-          <xs:element name="drivers" type="tns:drivers"/>
-        </xs:sequence>
-      </xs:choice>
+      <xs:sequence>
+        <xs:choice>
+          <xs:sequence>
+            <xs:element name="address" type="tns:address"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element name="vehicle" type="tns:vehicle"/>
+            <xs:element name="drivers" type="tns:drivers"/>
+          </xs:sequence>
+        </xs:choice>
+        <xs:element name="coverage" type="tns:coverage" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
       <xs:attribute name="name" type="xs:string"/>
       <xs:attribute name="riskType" type="tns:riskType" use="required"/>
     </xs:complexType>
@@ -51,6 +58,7 @@
       <xs:sequence>
         <xs:element name="insured" type="tns:insured"/>
         <xs:element name="risks" type="tns:risks"/>
+        <xs:element name="coverage" type="tns:coverage" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

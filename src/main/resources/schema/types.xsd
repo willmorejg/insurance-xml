@@ -72,11 +72,11 @@
             <xs:enumeration value="Personal Auto"/>
         </xs:restriction>
     </xs:simpleType>
-    <!--
-    <xs:complexType name="coverageType">
-        <xs:sequence>
 
-        </xs:sequence>
-    </xs:complexType>
--->
+    <xs:attributeGroup name="coverageType">
+        <xs:attribute type="xs:string" name="name"/>
+        <xs:attribute type="xs:string" name="code"/>
+        <xs:attribute type="xs:string" name="amount"/>
+    </xs:attributeGroup>
+
 </xs:schema>
